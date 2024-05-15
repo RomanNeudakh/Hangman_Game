@@ -1,14 +1,21 @@
 export class Header {
     constructor(container) {
-        this.mainLink = document.createElement('li')
+        this.linkArray = []
+        this.mainLink = document.createElement('a')
         this.mainLink.classList.add('main_link')
         this.mainLink.textContent = 'Main'
-        this.recordsLink = document.createElement('li')
+        this.mainLink.href = '/main'
+        this.linkArray.push(this.mainLink)
+        this.recordsLink = document.createElement('a')
         this.recordsLink.classList.add('records_link')
         this.recordsLink.textContent = 'Records'
-        this.gameLink = document.createElement('li')
+        this.recordsLink.href = '/records'
+        this.linkArray.push(this.recordsLink)
+        this.gameLink = document.createElement('a')
         this.gameLink.classList.add('game_link')
         this.gameLink.textContent = 'Game'
+        this.gameLink.href = '/'
+        this.linkArray.push(this.gameLink)
         this.list = document.createElement('ul')
         this.list.classList.add('nav')
         this.headerContainer = document.createElement('div')
@@ -33,17 +40,4 @@ export class Header {
             console.log('records')
         })
     }
-}
-
-
-export function header_component() {
-    return `<header class="header">
-                <div class="header_container">
-                    <ul class="nav">
-                        <li>Main</li>
-                        <li>Records</li>
-                        <li>Game</li>
-                    </ul>
-                </div>
-            </header>`;
 }

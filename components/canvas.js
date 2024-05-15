@@ -4,6 +4,7 @@ export class Canvas {
         this.context = this.canvas.getContext('2d')
         container.appendChild(this.canvas)
         this.fitToContainer(this.canvas)
+        this.count = 0
         // addEventListener('resize', () => this.fitToContainer(this.canvas))
         this.img = new Image();
         this.img.src = './assets/1.svg'
@@ -31,6 +32,31 @@ export class Canvas {
         this.context.rect(225, 30, 10, 40)
         this.context.fill()
         this.context.closePath()
+    }
+    drow() {
+        this.count++
+        switch (this.count) {
+            case 1:
+                this.drowHead();
+                break;
+            case 2:
+                this.drowBody();
+                break;
+            case 3:
+                this.drowLeftHand();
+                break;
+            case 4:
+                this.drowRightHand();
+                break;
+            case 5:
+                this.drowLeftFoot();
+                break;
+            case 6:
+                this.drowRightFoot();
+                break;
+            default:
+                break;
+        }
     }
     drowHead() {
         this.context.beginPath()
