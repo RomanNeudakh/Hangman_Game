@@ -4,17 +4,17 @@ export class Header {
         this.mainLink = document.createElement('a')
         this.mainLink.classList.add('main_link')
         this.mainLink.textContent = 'Main'
-        this.mainLink.href = '/main'
+        this.mainLink.href = '/Hangman_Game/main'
         this.linkArray.push(this.mainLink)
         this.recordsLink = document.createElement('a')
         this.recordsLink.classList.add('records_link')
         this.recordsLink.textContent = 'Records'
-        this.recordsLink.href = '/records'
+        this.recordsLink.href = '/Hangman_Game/records'
         this.linkArray.push(this.recordsLink)
         this.gameLink = document.createElement('a')
         this.gameLink.classList.add('game_link')
         this.gameLink.textContent = 'Game'
-        this.gameLink.href = '/'
+        this.gameLink.href = '/Hangman_Game/'
         this.linkArray.push(this.gameLink)
         this.list = document.createElement('ul')
         this.list.classList.add('nav')

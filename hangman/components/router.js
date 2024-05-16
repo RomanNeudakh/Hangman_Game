@@ -1,15 +1,15 @@
 export class Router {
     constructor(linkArray, renderGamePageFunc, renderRecordsPageFunc, renderMainPageFunc) {
         this.routes = {
-            '/main': {
+            '/Hangman_Game/main': {
               linkLabel: '/Hangman_Game/main',
               content: renderMainPageFunc
             },
-            '/': {
+            '/Hangman_Game/': {
               linkLabel: 'Game',
               content: renderGamePageFunc
             },
-            '/records': {
+            '/Hangman_Game/records': {
               linkLabel: 'Records',
               content: renderRecordsPageFunc,
             },
