@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "hangman",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "start": "lite-server",
     "predeploy": "vite build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "vite": "^5.2.0",
